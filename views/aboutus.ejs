@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BizPage Bootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="../BizPage/img/favicon.png" rel="icon">
+  <link href="../BizPage/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../BizPage/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../BizPage/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../BizPage/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="../BizPage/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="../BizPage/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="../BizPage/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../BizPage/css2/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: BizPage
+    Theme URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+ <header id="header">
+    <div class="container-fluid">
+
+      
+     <a href="/home" class="scrollto container"><img src="../BizPage/unipic/logo.png" alt="" title="" width="13%" style="margin-top:-30px;display:inline-block" /></a>   <span style="color:white;font-style:italic;font-size:14px;margin:0;">A Better Tomorrow..Starting Today <i class="fa fa-check"></i></span>
+        
+
+       <nav id="nav-menu-container">
+          <ul class="nav-menu">
+          <li  ><a style="color:#454444"  href="/home">Home</a></li>
+          <li  class="menu-active" ><a style="color:#454444" href="/aboutus">About Us</a></li>
+             <li  class="menu-has-children "><a style="color:#454444" href="">Students</a>
+            <ul>
+                 <li><a style="color:#454444" href="/how-it-works">How to Apply?</a></li>
+             
+              <li><a style="color:#454444" href="/eligibility-form/new">Check Eligibility</a></li>
+                 <li><a style="color:#454444" href="/life-in-canada">Life in Canada</a></li>
+                 <li><a style="color:#454444" href="/search">Search Institutes</a></li>
+                
+            </ul>
+          </li>
+  <li  class="menu-has-children "><a style="color:#454444" href="/faq">FAQ</a>
+       
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+
+  <main id="main">
+
+ 
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container" style="margin-top:100px">
+
+        <header class="section-header">
+          <h3 style="font-size:50px">About Us</h3>
+          
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="../BizPage/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+                <p><%=aboutus[0].mission%></p>
+      
+              
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="../BizPage/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+<p><%=aboutus[0].plan%></p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="../BizPage/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              
+              <p><%=aboutus[0].vision%></p>
+            
+
+              
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Our Services</h3>
+          <p>We intend to provide the assistance you need in every stage you need it</p>
+        </header>
+
+        <div class="row">
+            <% for(var i =0;i<service.length;i++) { %>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-<%= service[i].icon %>"></i></div>
+            <h4 class="title"><a href=""><%= service[i].heading %>
+</a></h4>
+            <p class="description"><%= service[i].service %>
+</p>
+          </div>
+    <%} %>
+
+
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+
+
+
+    <!--==========================
+    
+    <section id="facts"  class="wow fadeIn">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Facts</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <div class="row counters">
+
+  				<div class="col-lg-4 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Student</p>
+  				</div>
+
+          <div class="col-lg-4 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+  				</div>
+
+          <div class="col-lg-4 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+  				</div>
+
+          
+
+  			</div>
+
+        <div class="facts-img">
+          <img src="../BizPage/img/facts-img.png" alt="" class="img-fluid">
+        </div>
+
+      </div>
+    </section>
+      -->
+
+   
+
+   <hr>
+          <section id="about">
+      <div class="container">
+        <div class="row about-container">
+
+          <div class="col-lg-content order-lg-1 order-2">
+            <h2 class="title">Why choose Us</h2>
+            <p>
+           <p><%=aboutus[0].why_choose_us%></p>
+
+          
+
+          
+           
+
+           
+
+          </div>
+
+          <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight"></div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+    <!--==========================
+      Team Section
+    ============================-->
+         <section id="testimonials" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 style="color:white">What international students has to say</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+
+        <% for(var i =0;i<testimonial.length;i++) { %>
+
+          <div class="testimonial-item">
+           
+            <h3><%=testimonial[i].person_name%></h3>
+            <h4>Student at <%=testimonial[i].institute%></h4>
+            <p>
+              <img src="../BizPage/img/quote-sign-left.png" class="quote-sign-left" alt="">
+            <%=testimonial[i].statement%>
+              <img src="../BizPage/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+     <% } %>
+
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+     
+      
+        
+    <section id="team">
+      <div class="container">
+        <div class="section-header wow fadeInUp">
+          <h3>OUR Team</h3>
+         
+        </div>
+
+        <div  class="rw">
+  <img src="../BizPage/img/teamphoto2.png" class="img-fluid" alt="">
+          
+     
+
+        
+
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+   </section><!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+          <p>Submit your query by filling out form below, we typically reply within 24 to 48 hours</p>
+        </div>
+
+               <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Dubai Office Address</h3>
+              <address>  D端sseldorf Business Point Building, Suite 508
+front of Mall of Emirates
+Barsha 1, Dubai </address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+971-55-99-957758</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@mystudentcounselor.com</a></p>
+            </div>
+          </div>
+
+        </div>
+          
+        <div class="row contact-info">
+                
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Canada office Address</h3>
+              <address>  170 Robert Speck Pkwy #204, Mississauga, ON L4Z 3G1 </address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+1 (647)-660-5758</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@mystudentcounselor.com</a></p>
+            </div>
+          </div>
+
+        </div>
+          
+          
+
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+<!--          <form action="" method="post" role="form" class="contactForm">-->
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+        
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+ <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <a href="#intro" class="scrollto container"><img src="../BizPage/unipic/logo.png" alt="" title="" width="80%" style="margin-top:-30px;" /></a>   <span style="color:;font-style:italic;font-size:15px;">&nbsp&nbsp&nbsp&nbsp A Better Tomorrow..Starting Today <i class="fa fa-check"></i></span>
+           
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/home">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/aboutus">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/faq">FAQ</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="/eligibility-form/new">Eligibility Form</a></li>
+            </ul>
+          </div>
+              <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Dubai Office Address</h4>
+             <p>
+              Dusseldorf Business Point Building, Suite 508
+front of Mall of Emirates
+Barsha 1, Dubai
+U.A.E. <br>
+              <strong>Phone:</strong>  +971-55-99-95775<br>
+              <strong>Email:</strong> info@mystudentcounselor.com<br>
+              </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Canada Address </h4>
+            <p>
+              170 Robert Speck Pkwy #204, Mississauga, ON L4Z 3G1 <br>
+              <strong>Phone:</strong> +1 (647) 660-5758<br>
+              <strong>Email:</strong> info@mystudentcounselor.com<br>
+              </p>
+              <hr >
+              
+
+            <div class="social-links">
+              <!--<a href="@NVStudentCorp" class="twitter"><i class="fa fa-twitter"></i></a>-->
+              <a href=" http://www.facebook.com/nvstudentcounselling/" class="facebook"><i class="fa fa-facebook"></i></a>
+                 <a href="https://twitter.com/NVStudentCorp" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/nvcounselling/" class="facebook"><i class="fa fa-instagram"></i></a>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>NorthVista</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+       
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="../BizPage/lib/jquery/jquery.min.js"></script>
+  <script src="../BizPage/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="../BizPage/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../BizPage/lib/easing/easing.min.js"></script>
+  <script src="../BizPage/lib/superfish/hoverIntent.js"></script>
+  <script src="../BizPage/lib/superfish/superfish.min.js"></script>
+  <script src="../BizPage/lib/wow/wow.min.js"></script>
+  <script src="../BizPage/lib/waypoints/waypoints.min.js"></script>
+  <script src="../BizPage/lib/counterup/counterup.min.js"></script>
+  <script src="../BizPage/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="../BizPage/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="../BizPage/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="../BizPage/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="../BizPage/js/main.js"></script>
+
+</body>
+

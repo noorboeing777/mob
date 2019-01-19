@@ -1,0 +1,7 @@
+C488 is a small compiler used in a compiler course at the University of Toronto. 
+This program is small enough to be comprehensible, but big enough to make the 
+reverse engineering of it interesting. 
+
+The program is straightforward to compile:  use
+
+gcc *.c

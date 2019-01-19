@@ -1,0 +1,98 @@
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+video, .video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.video-overlay {
+  background: rgba(57, 57, 57, 0.5);
+}
+
+.content {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4em;
+  width: 600px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h5 {
+  font-size: 1em;
+  background: lightblue;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 2px;
+}
+
+/* YouTube Link */
+.youtube-link {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 150px;
+  margin-left: -75px;
+  text-align: center;
+  border-bottom: 1px solid #CCC;
+  font-family: Arial;
+}
+
+.youtube-link a {
+  text-decoration: none;  
+  color: #CCC;
+  display: inline-block;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+@media(max-height: 400px) {
+  .youtube-link {
+    display: none;
+  }
+}
+
+
+</style> 
+<div class="container">
+    <video poster="https://firebasestorage.googleapis.com/v0/b/codepen-files.appspot.com/o/videobg.jpg?alt=media&token=d196b0f0-b432-4e5c-ab87-fc826de3b931" autoplay loop muted>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <div class="content">
+      <h1>Life In Canada</h1>
+     
+    </div>
+  </div>
+
+<div class="youtube-link"><a href="https://youtu.be/1ii4zOsijrw" target="self">Watch on YouTube</a></div>
